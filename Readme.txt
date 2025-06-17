@@ -13,12 +13,6 @@ Training logs and metrics in CSV format.
 predictions_log/
 Per-character prediction results and analysis outputs.
 
-roboflow_local/
-Legacy wrapper for Roboflow-based models and preprocessing.
-
-past tries/
-Archived model checkpoints from early experimentation (code not documented).
-
 ViT.py / ViT2.py
 Vision Transformer model definitions and training pipeline. Both files contain similar code; one was used for final training, the other for experimentation.
 
@@ -32,7 +26,7 @@ wrong_predictions.csv
 List of incorrect predictions for targeted error analysis.
 
 vit-hebrew-final.zip
-Zipped archive of final trained model (used in production OCR backend).
+Zipped archive of final trained model (used in production OCR backend). can be found in releases
 
 confusion_matrix_pretrained_google.png
 Visual confusion matrix comparing ground truth vs ViT pretrained model predictions.
@@ -64,7 +58,7 @@ Moranzargari Hebrew Letters collection
 
 Sofia Naer’s open-source Hebrew characters set
 
-Images were normalized to a consistent size (72×72) and labeled into 27 Hebrew letter classes. Augmentation was applied to increase robustness (rotation, noise, shift, blur). See ViT.py for preprocessing code.
+Images were normalized to a consistent size (224×224) and labeled into 27 Hebrew letter classes. Augmentation was applied to increase robustness (rotation, noise, shift, blur). See ViT.py for preprocessing code.
 
 ⚙️ Notes
 This repository is not set up for deployment. It serves as the internal training environment used to generate the models shipped in Digi-Ktav
